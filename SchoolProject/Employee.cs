@@ -7,28 +7,17 @@ namespace SchoolProject
 {
     public class Employee
     {
-        public string FirstName
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string FirstName { get; set; }
 
-        public string LastName
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string LastName { get; set; }
 
-        public DateTime BirthDay
+        public DateTime BirthDay { get; set; }
+
+        public Employee(string firstName, string lastName, DateTime birthDay)
         {
-            get => default;
-            set
-            {
-            }
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDay = birthDay;
         }
     }
 }

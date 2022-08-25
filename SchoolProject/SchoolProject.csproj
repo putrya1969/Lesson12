@@ -44,9 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Child.cs" />
-    <Compile Include="StudyClass.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="FileHandler.cs" />
     <Compile Include="LearningStream.cs" />
+    <Compile Include="TeacherCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pupil.cs" />
@@ -54,8 +55,10 @@
     <Compile Include="ScheduleItem.cs" />
     <Compile Include="School.cs" />
     <Compile Include="SelectionCommittee.cs" />
+    <Compile Include="StudyClass.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="Teacher.cs" />
+    <Compile Include="TeacherGenerator.cs" />
     <Compile Include="TeachingStuff.cs" />
   </ItemGroup>
   <ItemGroup>

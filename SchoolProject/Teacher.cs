@@ -5,22 +5,15 @@ using System.Text;
 
 namespace SchoolProject
 {
-    public class Teacher
+    public class Teacher : Employee
     {
-        public StudyClass Class
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public StudyClass Class { get; set; }
 
-        public int Subjects
+        public Subject[] Subjects { get; set; }
+
+        public Teacher(string firstName, string lastName, DateTime birthDay, Subject[] subjects) : base (firstName, lastName, birthDay)
         {
-            get => default;
-            set
-            {
-            }
+            Subjects = subjects;
         }
     }
 }
