@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -8,8 +9,18 @@ namespace SchoolProject
     class School
     {
         public static Random Random = new Random();
+        public static string[] FirstNames;
+        public static string[] LastNames;
+        public static string[] SubjectsNames;
         public LearningStream[] LearnStreams { get; set;}
         public Teacher[] Teachers { get; set; }
+
+        static School()
+        {
+            FirstNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "FirstNames.txt")).Content;
+            LastNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "LastNames.txt")).Content;
+            SubjectsNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "Subjects.txt")).Content;
+        }
 
         public School()
         {
@@ -36,7 +47,7 @@ namespace SchoolProject
         }
         private void TeachersInit(int NumberOfTeachers)
         {
-            Teachers = new TeachersGenerator(NumberOfTeachers, Random).Teachers;
+            Teachers = new TeachersGenerator(NumberOfTeachers).Teachers;
         }
     }
 }
