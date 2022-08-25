@@ -7,5 +7,20 @@ namespace SchoolProject
 {
     public class ScheduleItem
     {
+        public int QtyPerDay
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int Subjects
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

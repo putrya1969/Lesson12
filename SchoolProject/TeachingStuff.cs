@@ -7,5 +7,12 @@ namespace SchoolProject
 {
     public class TeachingStuff
     {
+        public int Teachers
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

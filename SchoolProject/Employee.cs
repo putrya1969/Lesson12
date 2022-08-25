@@ -7,5 +7,28 @@ namespace SchoolProject
 {
     public class Employee
     {
+        public string FirstName
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public string LastName
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public DateTime BirthDay
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

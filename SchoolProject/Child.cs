@@ -23,6 +23,8 @@ namespace SchoolProject
             }
         }
 
+        public DateTime BirthDay { get; }
+
         public int Age
         {
             get => default;
@@ -31,12 +33,23 @@ namespace SchoolProject
             }
         }
 
-        public int DateOfBirth
+        public DateTime DateOfBirth
         {
             get => default;
             set
             {
             }
         }
+
+        public Child(string firstName, string lastName, DateTime birthDay) : this(firstName, lastName, birthDay, DateTime.Now.Year - birthDay.Year) { }
+
+        public Child(string firstName, string lastName, DateTime birthDay, int age)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDay = birthDay;
+            Age = age;
+        }
+
     }
 }

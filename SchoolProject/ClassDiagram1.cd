@@ -10,19 +10,19 @@
   <Class Name="SchoolProject.Pupil">
     <Position X="3.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Pupil.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SchoolProject.Class">
+  <Class Name="SchoolProject.StudyClass">
     <Position X="6.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECAAABAAAAAAAAAAAAAAQAAkAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Class.cs</FileName>
+      <HashCode>AAEAAAABAAAAAAAAAAAAAAQAAkAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StudyClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.SelectionCommittee">
-    <Position X="3.25" Y="3.75" Width="1.5" />
+    <Position X="5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>SelectionCommittee.cs</FileName>
@@ -31,63 +31,63 @@
   <Class Name="SchoolProject.Teacher">
     <Position X="6.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Teacher.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.TeachingStuff">
     <Position X="8.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>TeachingStuff.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.Subject">
     <Position X="5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>Subject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.Child">
     <Position X="1.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAEAAAAAAAAAYAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Child.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.Schedule">
     <Position X="8.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Schedule.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.LearningStream">
     <Position X="8.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LearningStream.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.School">
     <Position X="10.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACA=</HashCode>
       <FileName>School.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.ScheduleItem">
     <Position X="6.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ScheduleItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SchoolProject.Employee">
     <Position X="5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>

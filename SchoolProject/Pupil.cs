@@ -5,14 +5,19 @@ using System.Text;
 
 namespace SchoolProject
 {
-    class Pupil
+    public class Pupil : Child
     {
-        public Class Class
+        public StudyClass StudyClass
         {
             get => default;
             set
             {
             }
+        }
+     
+        public Pupil(StudyClass studyClass, string firstName, string lastName, DateTime birthDay) : base(firstName, lastName, birthDay)
+        {
+            StudyClass = studyClass;
         }
     }
 }

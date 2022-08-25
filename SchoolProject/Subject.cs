@@ -7,5 +7,20 @@ namespace SchoolProject
 {
     public class Subject
     {
+        public int Name
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int QtyPerWeek
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

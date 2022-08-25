@@ -10,6 +10,7 @@ namespace SchoolProject
     {
         static void Main(string[] args)
         {
+            var school = new School(4);
         }
     }
 }
