@@ -1,0 +1,8 @@
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.csproj.AssemblyReference.cache
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.csproj.SuggestedBindingRedirects.cache
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.csproj.CoreCompileInputs.cache
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\bin\Debug\SchoolProject.exe.config
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\bin\Debug\SchoolProject.exe
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\bin\Debug\SchoolProject.pdb
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.exe
+D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.pdb
