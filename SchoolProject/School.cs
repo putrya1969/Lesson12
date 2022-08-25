@@ -7,7 +7,9 @@ namespace SchoolProject
 {
     class School
     {
+        public static Random Random = new Random();
         public LearningStream[] LearnStreams { get; set;}
+        public Teacher[] Teachers { get; set; }
 
         public School()
         {
@@ -33,8 +35,8 @@ namespace SchoolProject
             }
         }
         private void TeachersInit(int NumberOfTeachers)
-        { 
-
+        {
+            Teachers = new TeachersGenerator(NumberOfTeachers, Random).Teachers;
         }
     }
 }

@@ -58,7 +58,7 @@
     <Compile Include="StudyClass.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="Teacher.cs" />
-    <Compile Include="TeacherGenerator.cs" />
+    <Compile Include="TeachersGenerator.cs" />
     <Compile Include="TeachingStuff.cs" />
   </ItemGroup>
   <ItemGroup>
