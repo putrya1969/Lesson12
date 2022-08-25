@@ -14,12 +14,13 @@ namespace SchoolProject
         public static string[] SubjectsNames;
         public LearningStream[] LearnStreams { get; set;}
         public Teacher[] Teachers { get; set; }
+        public List<Child> Children { get; set; }
 
         static School()
         {
             FirstNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "FirstNames.txt")).Content;
             LastNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "LastNames.txt")).Content;
-            SubjectsNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "Subjects.txt")).Content;
+            SubjectsNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "SubjectsNames.txt")).Content;
         }
 
         public School()
@@ -35,15 +36,18 @@ namespace SchoolProject
         private void LearnStreamsInit(int CountOfStreams, int CountClassesOnStream)
         {
             LearnStreams = new LearningStream[CountOfStreams];
+            List<Child> children = new List<Child>();
             for (int i = 0; i < this.LearnStreams.Length; i++)
             {
                 var learnStream = new LearningStream(CountClassesOnStream);
                 for (int j = 0; j < learnStream.Classes.Length; j++)
                 {
-                    learnStream.Classes[j] = new StudyClass($"{i + 1}-{Char.ConvertFromUtf32(65 + j)}");
+                    learnStream.Classes[j] = new StudyClass(i+1,$"{i + 1}-{Char.ConvertFromUtf32(65 + j)}", 25);
+                    children.AddRange(new ChildrenGenerator(learnStream.Classes[j].CountOfPupils, i + 1).Children);
                 }
                 LearnStreams[i] = learnStream;
             }
+            Children = children;
         }
         private void TeachersInit(int NumberOfTeachers)
         {

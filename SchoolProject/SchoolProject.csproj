@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Child.cs" />
+    <Compile Include="ChildCreator.cs" />
+    <Compile Include="ChildrenGenerator.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="LearningStream.cs" />
