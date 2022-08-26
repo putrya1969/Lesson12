@@ -7,7 +7,7 @@ namespace SchoolProject
 {
     public class SelectionCommittee
     {
-        public bool CheckVacansy(@string currentClass)
+        public bool CheckVacansy(StudyClass currentClass)
         {
             throw new System.NotImplementedException();
         }

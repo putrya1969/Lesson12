@@ -7,28 +7,12 @@ namespace SchoolProject
 {
     public class Schedule
     {
-        public int Class
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Name { get; set; }
+        public List<ScheduleItem> ItemsForWeek { get; set; }
 
-        public int Name
+        public Schedule(StudyClass studyClass)
         {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int ScheduleForDay
-        {
-            get => default;
-            set
-            {
-            }
+            Name = studyClass.Name;
         }
     }
 }

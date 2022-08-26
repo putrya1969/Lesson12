@@ -9,12 +9,14 @@ namespace SchoolProject
     class School
     {
         public static Random Random = new Random();
+
         public static string[] FirstNames;
+
         public static string[] LastNames;
+
         public static string[] SubjectsNames;
         public LearningStream[] LearnStreams { get; set;}
         public Teacher[] Teachers { get; set; }
-        public List<Child> Children { get; set; }
 
         static School()
         {
@@ -29,8 +31,8 @@ namespace SchoolProject
             int CountOfStreams = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter number of classes on stream");
             int CountClassesOnStream = int.Parse(Console.ReadLine());
-            LearnStreamsInit(CountOfStreams, CountClassesOnStream);
             TeachersInit(CountOfStreams * CountClassesOnStream);
+            LearnStreamsInit(CountOfStreams, CountClassesOnStream);
         }
 
         private void LearnStreamsInit(int CountOfStreams, int CountClassesOnStream)
@@ -49,6 +51,7 @@ namespace SchoolProject
                 }
                 LearnStreams[i] = learnStream;
             }
+            TeachersAppointment();
         }
         private void TeachersInit(int NumberOfTeachers)
         {
@@ -64,5 +67,32 @@ namespace SchoolProject
         {
             return $"{streamNumber}-{Char.ConvertFromUtf32(65 + classPosition)}";
         }
+
+        private void TeachersAppointment()
+        {
+            int teacherIndex = 0;
+            for (int i = 0; i < LearnStreams.Length; i++)
+            {
+                var learnStream = LearnStreams[i];
+                for (int j = 0; j < learnStream.Classes.Length; j++)
+                {
+                    learnStream.Classes[j].Teacher = Teachers[teacherIndex];
+                    Teachers[teacherIndex].Class = learnStream.Classes[j];
+                    teacherIndex++;
+                }
+            }
+        }
+
+        //private List<SubjectName> SubjectsInit()
+        //{
+        //    foreach (var item in SubjectsNames)
+        //    {
+        //        SubjectName subject =
+        //}
+
+        //private List<Teacher> GetTeacherBySubject(string subjectName)
+        //{
+        //    return Teachers.Where(t => t.SubjectsNames.Equals(subjectName)).ToList();
+        //}
     }
 }

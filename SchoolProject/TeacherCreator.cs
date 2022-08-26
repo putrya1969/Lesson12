@@ -53,14 +53,14 @@ namespace SchoolProject
             return new DateTime(year, month, day);
         }
 
-        private Subject[] CreateSubjects()
+        private SubjectName[] CreateSubjects()
         {
             var countSubjects = RandomNumber.Next(1, 3);
-            var subjects = new Subject[countSubjects];
+            var subjects = new SubjectName[countSubjects];
             for (int i = 0; i < subjects.Length; i++)
             {
                 var subjIndex = RandomNumber.Next(0, SubjectsNames.Length - 1);
-                subjects[i] = new Subject(SubjectsNames[subjIndex]);
+                subjects[i] = new SubjectName(SubjectsNames[subjIndex]);
             }
             return subjects;
         }

@@ -7,13 +7,13 @@ namespace SchoolProject
 {
     public class Teacher : Employee
     {
-        public @string Class { get; set; }
+        public StudyClass Class { get; set; }
 
-        public Subject[] Subjects { get; set; }
+        public SubjectName[] SubjectsNames { get; set; }
 
-        public Teacher(string firstName, string lastName, DateTime birthDay, Subject[] subjects) : base (firstName, lastName, birthDay)
+        public Teacher(string firstName, string lastName, DateTime birthDay, SubjectName[] subjectsNames) : base (firstName, lastName, birthDay)
         {
-            Subjects = subjects;
+            SubjectsNames = subjectsNames;
         }
     }
 }

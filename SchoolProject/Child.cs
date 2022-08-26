@@ -15,7 +15,6 @@ namespace SchoolProject
 
         public int Age { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
         public Child(string firstName, string lastName, DateTime birthDay) : this(firstName, lastName, birthDay, DateTime.Now.Year - birthDay.Year) { }
 
         public Child(string firstName, string lastName, DateTime birthDay, int age)

@@ -6,3 +6,10 @@ D:\Beetroot\Lesson3\Lesson12\SchoolProject\bin\Debug\SchoolProject.exe
 D:\Beetroot\Lesson3\Lesson12\SchoolProject\bin\Debug\SchoolProject.pdb
 D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.exe
 D:\Beetroot\Lesson3\Lesson12\SchoolProject\obj\Debug\SchoolProject.pdb
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\obj\Debug\SchoolProject.csprojAssemblyReference.cache
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\obj\Debug\SchoolProject.csproj.CoreCompileInputs.cache
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\obj\Debug\SchoolProject.exe
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\obj\Debug\SchoolProject.pdb
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\bin\Debug\SchoolProject.exe.config
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\bin\Debug\SchoolProject.exe
+C:\Users\D.Putrya\source\repos\Lesson12\lesson12\SchoolProject\bin\Debug\SchoolProject.pdb

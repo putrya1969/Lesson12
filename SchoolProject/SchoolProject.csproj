@@ -44,12 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Child.cs" />
-    <Compile Include="ChildCreator.cs" />
+    <Compile Include="ScheduleItemCreator.cs" />
     <Compile Include="ChildrenGenerator.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="LearningStream.cs" />
     <Compile Include="PupilCreator.cs" />
+    <Compile Include="ScheduleCreator.cs" />
     <Compile Include="TeacherCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,7 +60,7 @@
     <Compile Include="School.cs" />
     <Compile Include="SelectionCommittee.cs" />
     <Compile Include="StudyClass.cs" />
-    <Compile Include="Subject.cs" />
+    <Compile Include="SubjectName.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TeachersGenerator.cs" />
     <Compile Include="TeachingStuff.cs" />

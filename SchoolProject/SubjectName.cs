@@ -5,12 +5,11 @@ using System.Text;
 
 namespace SchoolProject
 {
-    public class Subject
+    public class SubjectName
     {
         public string Name { get; set; }
 
-        //public int QtyPerWeek { get; set; }
-        public Subject(string name)
+        public SubjectName(string name)
         {
             Name = name;
         }
