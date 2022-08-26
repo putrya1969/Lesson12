@@ -9,9 +9,9 @@ namespace SchoolProject
     {
         public StudyClass Class { get; set; }
 
-        public SubjectName[] SubjectsNames { get; set; }
+        public List<SubjectName> SubjectsNames { get; set; }
 
-        public Teacher(string firstName, string lastName, DateTime birthDay, SubjectName[] subjectsNames) : base (firstName, lastName, birthDay)
+        public Teacher(string firstName, string lastName, DateTime birthDay, List<SubjectName> subjectsNames) : base (firstName, lastName, birthDay)
         {
             SubjectsNames = subjectsNames;
         }
