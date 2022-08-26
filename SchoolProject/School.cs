@@ -36,22 +36,33 @@ namespace SchoolProject
         private void LearnStreamsInit(int CountOfStreams, int CountClassesOnStream)
         {
             LearnStreams = new LearningStream[CountOfStreams];
-            List<Child> children = new List<Child>();
             for (int i = 0; i < this.LearnStreams.Length; i++)
             {
                 var learnStream = new LearningStream(CountClassesOnStream);
                 for (int j = 0; j < learnStream.Classes.Length; j++)
                 {
-                    learnStream.Classes[j] = new StudyClass(i+1,$"{i + 1}-{Char.ConvertFromUtf32(65 + j)}", 25);
-                    children.AddRange(new ChildrenGenerator(learnStream.Classes[j].CountOfPupils, i + 1).Children);
+                    int streamNumber = i + 1;
+                    int classPosition = j;
+                    string className = GetClassName(streamNumber,classPosition);
+                    int countOfPupil = 25;
+                    learnStream.Classes[j] = CreateClass(streamNumber, className, countOfPupil);
                 }
                 LearnStreams[i] = learnStream;
             }
-            Children = children;
         }
         private void TeachersInit(int NumberOfTeachers)
         {
             Teachers = new TeachersGenerator(NumberOfTeachers).Teachers;
+        }
+
+        private StudyClass CreateClass(int streamNum, string className, int numberOfPupils)
+        {
+            return new StudyClass(streamNum, className, numberOfPupils);
+        }
+
+        private string GetClassName(int streamNumber, int classPosition)
+        {
+            return $"{streamNumber}-{Char.ConvertFromUtf32(65 + classPosition)}";
         }
     }
 }

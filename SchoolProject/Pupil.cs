@@ -7,12 +7,12 @@ namespace SchoolProject
 {
     public class Pupil : Child
     {
-        public StudyClass StudyClass { get; set; }
+        public string StudyClassName { get; set; }
 
      
-        public Pupil(StudyClass studyClass, string firstName, string lastName, DateTime birthDay) : base(firstName, lastName, birthDay)
+        public Pupil(string studyClassName, string firstName, string lastName, DateTime birthDay) : base(firstName, lastName, birthDay)
         {
-            StudyClass = studyClass;
+            StudyClassName = studyClassName;
         }
     }
 }

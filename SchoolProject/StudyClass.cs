@@ -8,7 +8,6 @@ namespace SchoolProject
         public string Name { get; set; }
         public int CountOfPupils { get; set; }
         public Teacher Teacher { get; set; }
-
         public List<Pupil> Pupils { get; set; }
 
 
@@ -17,6 +16,20 @@ namespace SchoolProject
             StreamNumber = streamNumber;
             Name = name;
             CountOfPupils = countOfPupils;
+            GetPupils(ChildrenCreate());
+        }
+
+        private void GetPupils(List<Child> children)
+        {
+            foreach (var item in children)
+            {
+                Pupils.Add(PupilCreator.CreatePupil(Name, item));
+            }
+        }
+
+        private List<Child> ChildrenCreate()
+        {
+            return ChildrenGenerator.Generate(CountOfPupils, StreamNumber);
         }
     }
 }

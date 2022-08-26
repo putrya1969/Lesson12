@@ -7,7 +7,7 @@ namespace SchoolProject
 {
     public class Teacher : Employee
     {
-        public StudyClass Class { get; set; }
+        public @string Class { get; set; }
 
         public Subject[] Subjects { get; set; }
 

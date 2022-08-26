@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace SchoolProject
 {
-
-    internal class ChildrenGenerator
+    public static class ChildrenGenerator
     {
-        public List<Child> Children { get; set; } = new List<Child>();
-        public ChildrenGenerator(int countOfChildren, int streamNumber)
+        public static List<Child> Generate(int countOfChildren, int streamNumber)
         {
+            List<Child> children = new List<Child>();
             for (int i = 0; i < countOfChildren; i++)
             {
-                Children.Add(new ChildCreator(School.FirstNames, School.LastNames, School.Random, streamNumber).CreateChild());
+                children.Add(new ChildCreator(School.FirstNames, School.LastNames, School.Random, streamNumber).CreateChild());
             }
+            return children;
         }
     }
 }

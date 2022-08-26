@@ -9,6 +9,8 @@ namespace SchoolProject
 {
     internal class ChildCreator
     {
+        static int PupilAgeLowBound = 6;
+        static int PupilAgeUpBound = 7;
         public string[] FirstNames { get; }
         public string[] LastNames { get; }
         public Random RandomNumber { get; }
@@ -41,7 +43,7 @@ namespace SchoolProject
 
         private DateTime CreateBirthDate()
         {
-            var year = RandomNumber.Next(DateTime.Now.Year - 7 - StreamNumber, DateTime.Now.Year - 6 - StreamNumber);
+            var year = RandomNumber.Next(DateTime.Now.Year - PupilAgeUpBound - StreamNumber, DateTime.Now.Year - PupilAgeLowBound - StreamNumber);
             var month = RandomNumber.Next(1, 12);
             int day;
             if(month==2)
