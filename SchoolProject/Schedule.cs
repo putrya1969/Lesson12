@@ -12,7 +12,7 @@ namespace SchoolProject
 
         public Schedule(StudyClass studyClass)
         {
-            Name = studyClass.Name;
+            Name = $"Schedule for {studyClass.Name} class";
         }
     }
 }

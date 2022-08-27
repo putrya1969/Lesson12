@@ -6,7 +6,7 @@ using System.Text;
 
 namespace SchoolProject
 {
-    class School
+    class School 
     {
         public static Random Random = new Random();
 
@@ -17,8 +17,7 @@ namespace SchoolProject
         public static string[] SubjectsNames;
         public LearningStream[] LearnStreams { get; set;}
         public Teacher[] Teachers { get; set; }
-
-        public List<Subject> Subjects { get; set; }
+        internal List<Subject> Subjects { get; set; }
 
         static School()
         {
@@ -35,9 +34,8 @@ namespace SchoolProject
             int CountClassesOnStream = int.Parse(Console.ReadLine());
             TeachersInit(CountOfStreams * CountClassesOnStream);
             LearnStreamsInit(CountOfStreams, CountClassesOnStream);
-            Subjects = SubjectsInit();
+            using (SubjectHandler subjectHandler = new SubjectHandler(Teachers)){ Subjects = subjectHandler.Subjects; }
         }
-
         private void LearnStreamsInit(int CountOfStreams, int CountClassesOnStream)
         {
             LearnStreams = new LearningStream[CountOfStreams];
@@ -84,32 +82,6 @@ namespace SchoolProject
                     teacherIndex++;
                 }
             }
-        }
-
-        private List<Subject> SubjectsInit()
-        {
-            var subjects = new List<Subject>();
-            var currentSubjectsNames = GetSubjectNamesByTeachers().Distinct().ToList();
-            foreach (var item in currentSubjectsNames)
-            {
-                Subject subject = new Subject(item, GetTeacherBySubject(item));
-                subjects.Add(subject);
-            }
-            return subjects;
-        }
-
-        private List<string> GetSubjectNamesByTeachers()
-        {
-            var subjectNames = new List<SubjectName>();
-            foreach (var item in Teachers)
-            {
-                subjectNames.AddRange(item.SubjectsNames);
-            }
-            return subjectNames.Select(s => s.Name).ToList();
-        }
-        private List<Teacher> GetTeacherBySubject(string subjectName)
-        {
-            return Teachers.Where(t => t.SubjectsNames.Select(x => x.Name).Contains(subjectName)).ToList();
         }
     }
 }
