@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SchoolProject
 {
-    internal class SubjectHandler : IDisposable
+    public class SubjectHandler : IDisposable
     {
 
         public Teacher[] Teachers { get; set; }
-        public List<Subject> Subjects { get; set; }
+        internal List<Subject> Subjects { get; set; }
         public SubjectHandler(Teacher[] teachers)
         {
             Teachers = teachers;
@@ -33,7 +33,7 @@ namespace SchoolProject
 
         private List<Subject> SubjectsInit()
         {
-            var subjects = new List<Subject>();
+            List<Subject> subjects = new List<Subject>();
             var currentSubjectsNames = GetSubjectNamesByTeachers().Distinct().ToList();
             foreach (var item in currentSubjectsNames)
             {

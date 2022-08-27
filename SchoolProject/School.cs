@@ -17,7 +17,7 @@ namespace SchoolProject
         public static string[] SubjectsNames;
         public LearningStream[] LearnStreams { get; set;}
         public Teacher[] Teachers { get; set; }
-        internal List<Subject> Subjects { get; set; }
+        public List<Subject> Subjects { get; set; }
 
         static School()
         {
@@ -35,6 +35,9 @@ namespace SchoolProject
             TeachersInit(CountOfStreams * CountClassesOnStream);
             LearnStreamsInit(CountOfStreams, CountClassesOnStream);
             using (SubjectHandler subjectHandler = new SubjectHandler(Teachers)){ Subjects = subjectHandler.Subjects; }
+            var schedule =  ScheduleCreator.Create(LearnStreams[0].Classes[0], 5, Subjects, Random);
+            schedule.Print();
+            Console.ReadKey();
         }
         private void LearnStreamsInit(int CountOfStreams, int CountClassesOnStream)
         {

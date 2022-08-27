@@ -44,15 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Child.cs" />
-    <Compile Include="ScheduleItemCreator.cs" />
+    <Compile Include="ChildCreator.cs" />
     <Compile Include="ChildrenGenerator.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="LearningStream.cs" />
     <Compile Include="PupilCreator.cs" />
     <Compile Include="ScheduleCreator.cs" />
+    <Compile Include="SubjectsItemsGenerator.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="SubjectHandler.cs" />
+    <Compile Include="SubjectItem.cs" />
     <Compile Include="TeacherCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

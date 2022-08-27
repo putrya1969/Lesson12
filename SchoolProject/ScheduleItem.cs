@@ -7,21 +7,12 @@ namespace SchoolProject
 {
     public class ScheduleItem
     {
-        public WorkDayOfWeek NameOfDay { get; set; }
-        public List<SubjectName> SubjectsForDay { get; set; }
-        public ScheduleItem(WorkDayOfWeek nameOfDay, List<SubjectName> subjectsForDay)
+        public int DayNumber { get; set; }
+        public List<SubjectItem> SubjectItems { get; set; }
+        public ScheduleItem(int dayNumber, List<SubjectItem> subjectItems)
         {
-            NameOfDay = nameOfDay;
-            SubjectsForDay = subjectsForDay;
+            DayNumber = dayNumber;
+            SubjectItems = subjectItems;
         }
-    }
-
-    public enum WorkDayOfWeek
-    { 
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday
     }
 }
