@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace SchoolProject
 {
-    public class TeachersGenerator
+    internal class TeachersGenerator : IDisposable
     {
-        public Teacher[] Teachers { get; set; }
+        internal List<Teacher> Teachers { get; set; } = new List<Teacher>();
         public TeachersGenerator(int countTeachers)
         {
-            Teachers = new Teacher[countTeachers];
+
             for (int i = 0; i < countTeachers; i++)
             {
-                Teachers[i] = new TeacherCreator(School.FirstNames, School.LastNames, School.SubjectsNames, School.Random).CreateTeacher();
+                Teachers.Add(new TeacherCreator(School.FirstNames, School.LastNames, School.SubjectsNames, School.Random).CreateTeacher());
             }
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
         }
     }
 }

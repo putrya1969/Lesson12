@@ -15,8 +15,8 @@ namespace SchoolProject
         public static string[] LastNames;
 
         public static string[] SubjectsNames;
-        public LearningStream[] LearnStreams { get; set;}
-        public Teacher[] Teachers { get; set; }
+        public List<LearningStream> LearnStreams { get; set; }
+        public List<Teacher> Teachers { get; set; }
         public List<Subject> Subjects { get; set; }
 
         static School()
@@ -26,59 +26,26 @@ namespace SchoolProject
             SubjectsNames = new FileHandler(Path.Combine(Environment.CurrentDirectory, "SubjectsNames.txt")).Content;
         }
 
-        public School()
+        public School(int countOfStreams, int countClassesOnStream)
         {
-            Console.WriteLine("Enter number of streams");
-            int CountOfStreams = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter number of classes on stream");
-            int CountClassesOnStream = int.Parse(Console.ReadLine());
-            TeachersInit(CountOfStreams * CountClassesOnStream);
-            LearnStreamsInit(CountOfStreams, CountClassesOnStream);
+            using (TeachersGenerator teachersGenerator = new TeachersGenerator(countOfStreams * countClassesOnStream)) 
+            { Teachers = teachersGenerator.Teachers; }
+            using (LearnStreamGenerator learnStreamGenerator = new LearnStreamGenerator(countOfStreams, countClassesOnStream))
+            { LearnStreams = learnStreamGenerator.LearningStreams; }
+            TeachersAppointment();
             using (SubjectHandler subjectHandler = new SubjectHandler(Teachers)){ Subjects = subjectHandler.Subjects; }
             var schedule =  ScheduleCreator.Create(LearnStreams[0].Classes[0], 5, Subjects, Random);
             schedule.Print();
             Console.ReadKey();
         }
-        private void LearnStreamsInit(int CountOfStreams, int CountClassesOnStream)
-        {
-            LearnStreams = new LearningStream[CountOfStreams];
-            for (int i = 0; i < this.LearnStreams.Length; i++)
-            {
-                var learnStream = new LearningStream(CountClassesOnStream);
-                for (int j = 0; j < learnStream.Classes.Length; j++)
-                {
-                    int streamNumber = i + 1;
-                    int classPosition = j;
-                    string className = GetClassName(streamNumber,classPosition);
-                    int countOfPupil = 25;
-                    learnStream.Classes[j] = CreateClass(streamNumber, className, countOfPupil);
-                }
-                LearnStreams[i] = learnStream;
-            }
-            TeachersAppointment();
-        }
-        private void TeachersInit(int NumberOfTeachers)
-        {
-            Teachers = new TeachersGenerator(NumberOfTeachers).Teachers;
-        }
-
-        private StudyClass CreateClass(int streamNum, string className, int numberOfPupils)
-        {
-            return new StudyClass(streamNum, className, numberOfPupils);
-        }
-
-        private string GetClassName(int streamNumber, int classPosition)
-        {
-            return $"{streamNumber}-{Char.ConvertFromUtf32(65 + classPosition)}";
-        }
 
         private void TeachersAppointment()
         {
             int teacherIndex = 0;
-            for (int i = 0; i < LearnStreams.Length; i++)
+            for (int i = 0; i < LearnStreams.Count; i++)
             {
                 var learnStream = LearnStreams[i];
-                for (int j = 0; j < learnStream.Classes.Length; j++)
+                for (int j = 0; j < learnStream.Classes.Count; j++)
                 {
                     learnStream.Classes[j].Teacher = Teachers[teacherIndex];
                     Teachers[teacherIndex].Class = learnStream.Classes[j];

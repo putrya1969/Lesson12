@@ -9,9 +9,9 @@ namespace SchoolProject
     public class SubjectHandler : IDisposable
     {
 
-        public Teacher[] Teachers { get; set; }
+        internal List<Teacher> Teachers { get; set; }
         internal List<Subject> Subjects { get; set; }
-        public SubjectHandler(Teacher[] teachers)
+        internal SubjectHandler(List<Teacher> teachers)
         {
             Teachers = teachers;
             Subjects = SubjectsInit();

@@ -2,7 +2,7 @@
 
 namespace SchoolProject
 {
-    public class StudyClass
+    internal class StudyClass
     {
         public int StreamNumber { get; }
         public string Name { get; set; }
@@ -11,7 +11,7 @@ namespace SchoolProject
         public List<Pupil> Pupils { get; set; }
         public Schedule Schedule { get; set; }
 
-        public StudyClass(int streamNumber, string name, int countOfPupils)
+        internal StudyClass(int streamNumber, string name, int countOfPupils)
         {
             StreamNumber = streamNumber;
             Name = name;

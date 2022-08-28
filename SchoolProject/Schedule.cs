@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SchoolProject
 {
-    public class Schedule
+    internal class Schedule
     {
         public string Name { get; set; }
-        public List<ScheduleItem> ScheduleItems { get; set; } = new List<ScheduleItem>();
+        internal List<ScheduleItem> ScheduleItems { get; set; } = new List<ScheduleItem>();
 
         internal Schedule(string name, List<ScheduleItem> scheduleItems)
         {

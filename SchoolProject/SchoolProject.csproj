@@ -49,6 +49,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="LearningStream.cs" />
+    <Compile Include="LearnStreamGenerator.cs" />
     <Compile Include="PupilCreator.cs" />
     <Compile Include="ScheduleCreator.cs" />
     <Compile Include="SubjectsItemsGenerator.cs" />
@@ -62,7 +63,6 @@
     <Compile Include="Schedule.cs" />
     <Compile Include="ScheduleItem.cs" />
     <Compile Include="School.cs" />
-    <Compile Include="SelectionCommittee.cs" />
     <Compile Include="StudyClass.cs" />
     <Compile Include="SubjectName.cs" />
     <Compile Include="Teacher.cs" />

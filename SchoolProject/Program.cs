@@ -10,7 +10,11 @@ namespace SchoolProject
     {
         static void Main(string[] args)
         {
-            var school = new School();
+            Console.WriteLine("Enter number of streams");
+            int CountOfStreams = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter number of classes on stream");
+            int CountClassesOnStream = int.Parse(Console.ReadLine());
+            var school = new School(CountOfStreams, CountClassesOnStream);
         }
     }
 }

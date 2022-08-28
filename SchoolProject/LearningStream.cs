@@ -5,13 +5,8 @@ using System.Text;
 
 namespace SchoolProject
 {
-    public class LearningStream
+    internal class LearningStream
     {
-        public StudyClass[] Classes { get; set; }
-
-        public LearningStream(int NumberOfStudyClass)
-        {
-            Classes = new StudyClass[NumberOfStudyClass];
-        }
+        internal List<StudyClass> Classes { get; set; } = new List<StudyClass>();
     }
 }

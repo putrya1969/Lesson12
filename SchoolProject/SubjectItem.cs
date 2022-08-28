@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SchoolProject
 {
-    public class SubjectItem
+    internal class SubjectItem
     {
         public string SubjectName { get; set; }
-        public Teacher Teacher { get; set; }
-        public SubjectItem(string subjectName, Teacher teacher)
+        internal Teacher Teacher { get; set; }
+        internal SubjectItem(string subjectName, Teacher teacher)
         {
             SubjectName = subjectName;
             Teacher = teacher;

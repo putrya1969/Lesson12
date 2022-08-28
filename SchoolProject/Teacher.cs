@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SchoolProject
 {
-    public class Teacher : Employee
+    internal class Teacher : Employee
     {
         public StudyClass Class { get; set; }
 
