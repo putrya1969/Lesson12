@@ -15,9 +15,9 @@ namespace SchoolProject
         public static string[] LastNames;
 
         public static string[] SubjectsNames;
-        public List<LearningStream> LearnStreams { get; set; }
-        public List<Teacher> Teachers { get; set; }
-        public List<Subject> Subjects { get; set; }
+        public List<LearningStream> LearnStreams { get; private set; }
+        public List<Teacher> Teachers { get; private set; }
+        public List<Subject> Subjects { get; private set; }
 
         static School()
         {
@@ -34,9 +34,7 @@ namespace SchoolProject
             { LearnStreams = learnStreamGenerator.LearningStreams; }
             TeachersAppointment();
             using (SubjectHandler subjectHandler = new SubjectHandler(Teachers)){ Subjects = subjectHandler.Subjects; }
-            var schedule =  ScheduleCreator.Create(LearnStreams[0].Classes[0], 5, Subjects, Random);
-            schedule.Print();
-            Console.ReadKey();
+            using (SchedulesGenerator schedulesGenerator = new SchedulesGenerator(LearnStreams, Subjects)){ }
         }
 
         private void TeachersAppointment()

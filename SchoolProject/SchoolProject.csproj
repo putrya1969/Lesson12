@@ -52,6 +52,7 @@
     <Compile Include="LearnStreamGenerator.cs" />
     <Compile Include="PupilCreator.cs" />
     <Compile Include="ScheduleCreator.cs" />
+    <Compile Include="SchedulesGenerator.cs" />
     <Compile Include="SubjectsItemsGenerator.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="SubjectHandler.cs" />

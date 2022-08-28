@@ -24,7 +24,7 @@ namespace SchoolProject
                 Console.WriteLine($"Day {item.DayNumber + 1}");
                 for (int i = 0; i < item.SubjectItems.Count; i++)
                 {
-                    Console.WriteLine($"{item.SubjectItems[i].SubjectName} {item.SubjectItems[i].Teacher.LastName} {item.SubjectItems[i].Teacher.FirstName}");
+                    Console.WriteLine($"{item.SubjectItems[i].SubjectName} - {item.SubjectItems[i].Teacher.LastName} {item.SubjectItems[i].Teacher.FirstName}");
                 }
             }
         }
